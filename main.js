@@ -55,7 +55,7 @@ function randomNumber(){
 
 function animationAndSound(button) {
     if(button === "rest"){}
-    sound = new Audio('sounds/' + button + '.mp3');
+    sound = new Audio(button + '.mp3');
     sound.play();
     $('#' + button).removeClass(button).addClass('.pressed');
     setTimeout(function() {
@@ -77,8 +77,4 @@ function restart() {
     gamePattern = [];
     userPattern = [];
 
-}
-
-function hi(params) {
-    console.log('Hi');
 }
