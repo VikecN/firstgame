@@ -18,10 +18,7 @@ $('#rest').click( function(){
 
 $('.btn').click(function() {
     var click = $(this).attr('id');
-    if(click === 'rest'){
-        console.log('Hi');
-    }
-    animationAndSound(click);
+    //animationAndSound(click);
     userPattern.push(click);
     chackAnswer(userPattern.length - 1);
 });
@@ -48,11 +45,10 @@ function randomNumber(){
     userPattern = [];
     $('#level-title').text("Level: " + ++level);
     var numberGenerated = Math.floor(Math.random() * 4);
-    animationAndSound(buttonColors[numberGenerated]);
+    //animationAndSound(buttonColors[numberGenerated]);
     gamePattern.push(buttonColors[numberGenerated]);
-    console.log(buttonColors[numberGenerated]);
 }
-
+/*
 function animationAndSound(button) {
     if(button === "rest"){}
     sound = new Audio(button + '.mp3');
@@ -62,6 +58,7 @@ function animationAndSound(button) {
         $('#' + button).removeClass('.pressed').addClass(button);
     }, 100);
 }
+*/
 
 function restart() {    
     $('body').addClass('game-over'); 
