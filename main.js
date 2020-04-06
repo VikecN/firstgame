@@ -50,21 +50,19 @@ function randomNumber(){
 }
 
 function animationAndSound(button) {
-    if(button === "rest"){}
-    /*
-    sound = new Audio(button + '.mp3');
-    sound.play();
-    */
+    if(button === "rest"){
+    }
+    //sound = new Audio('sounds/' + button + '.mp3');
+    //sound.play();
     $('#' + button).removeClass(button).addClass('.pressed');
     setTimeout(function() {
         $('#' + button).removeClass('.pressed').addClass(button);
     }, 100);
 }
 
-
 function restart() {    
     $('body').addClass('game-over'); 
-    animationAndSound('wrong');
+    //animationAndSound('wrong');
 
     setTimeout(function(){
         $('body').removeClass('game-over'); 
